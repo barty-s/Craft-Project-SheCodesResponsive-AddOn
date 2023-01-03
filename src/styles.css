@@ -1,5 +1,6 @@
 body {
   font-family: "Monserrat", sans-serif;
+  background-color: #3e5f6e;
 }
 .container {
   max-width: 1400px;
@@ -57,6 +58,30 @@ header a:hover {
   color: white;
 }
 
+main {
+  background-color: white;
+}
+main h2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 0;
+}
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 footer {
   color: white;
   background-image: linear-gradient(
@@ -66,7 +91,6 @@ footer {
     url(../images/surf-footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 0;
 }
 footer h3 {
   font-weight: 600;
@@ -78,7 +102,6 @@ footer p {
   font-size: 16x;
   line-height: 24px;
   opacity: 0.9;
-  margin-right: 15px;
 }
 footer li {
   list-style: none;
@@ -91,16 +114,34 @@ footer ul {
 footer a {
   color: white;
   opacity: 0.7;
+  transition: all 150ms ease-in-out;
+}
+footer a:hover {
+  font-weight: bold;
+  opacity: 1;
 }
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 .grid {
   display: grid;
+
+  grid-gap: 64px;
+}
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3-cols-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
-@media (max-width: 900px) {
+.image-responsive {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width: 960px) {
   header {
     padding: 60px 0;
   }
@@ -117,5 +158,19 @@ section {
   }
   header a {
     padding: 8px 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+  section {
+    padding: 30px;
+  }
+  footer h3 {
+    margin: 8px 0;
+  }
+  footer ul,
+  footer p {
+    margin: 8px 0;
   }
 }
