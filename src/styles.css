@@ -229,6 +229,7 @@ section {
   .grid {
     grid-template-columns: 1fr;
     grid-gap: 32px;
+    height: auto;
   }
   section {
     padding: 30px;
@@ -241,6 +242,6 @@ section {
     margin: 8px 0;
   }
   .embed {
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
   }
 }
